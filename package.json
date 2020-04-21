@@ -13,9 +13,12 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2",
     "typescript": "^3.7.5"
   },
   "scripts": {
+    "prepublishOnly": "",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

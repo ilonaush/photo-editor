@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {useImageContext} from "./context/context";
+import ImageLoader from "./components/image-loader/image-loader";
+
 
 function App() {
+
+  const {image} = useImageContext();
+  console.log(image);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="app">
+      <header className="app-header">
+        photo editor
       </header>
+      <div className="content">
+        {image ? <img src={image} alt=""/> : <ImageLoader/>}
+      </div>
     </div>
   );
 }
