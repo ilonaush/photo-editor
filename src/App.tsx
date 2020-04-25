@@ -1,20 +1,23 @@
 import React from 'react';
-import './App.css';
+import './App.styl';
 import {useImageContext} from "./context/context";
 import ImageLoader from "./components/image-loader/image-loader";
+import Workspace from "./components/workspace/workspace";
+import Header from "./components/header/header";
+import Toolbar from "./components/toolbar/toolbar";
 
 
 function App() {
 
   const {image} = useImageContext();
-  console.log(image);
   return (
     <div className="app">
-      <header className="app-header">
-        photo editor
-      </header>
+      <Header/>
       <div className="content">
-        {image ? <img src={image} alt=""/> : <ImageLoader/>}
+        {image ? <>
+          <Toolbar/>
+          <Workspace/>
+          </> : <ImageLoader/>}
       </div>
     </div>
   );

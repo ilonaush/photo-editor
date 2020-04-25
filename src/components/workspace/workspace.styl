@@ -1,0 +1,43 @@
+.workspace
+  height 100%
+  display flex
+  position: relative;
+  flex-direction column
+  flex 1
+  overflow hidden
+  background-color lightgray
+  canvas
+    position absolute
+    left 50%
+    right 0
+    top 50%
+    transform translate(-50%, -50%)
+
+  .save-btn
+    position absolute
+    bottom 50px
+    right 50px
+    width 40px
+    height 40px
+    cursor pointer
+    border-radius 50%
+    background-color aliceblue
+    box-shadow 0 0 10px rgba(0,0,0,0.5);
+    img
+      width 30px
+      position absolute
+      top 50%
+      left 50%
+      transform translate(-50%, -50%)
+      height 30px
+
+  .navigate
+    display inline-flex
+    position absolute
+    right 0
+    top 80px
+    background-color cadetblue
+    .plus
+    .minus
+      cursor pointer
+      margin 20px

@@ -1,6 +1,7 @@
 import React, {useCallback} from 'react';
 import {ACTIONS} from "../../constants";
 import {useDispatch} from "../../hooks/useDispatch";
+import "./image-loader.styl";
 
 const ImageLoader = () => {
 		const dispatch = useDispatch();
@@ -19,8 +20,8 @@ const ImageLoader = () => {
 		}, [dispatch]);
 
 		return (
-			<div>
-				<label htmlFor="file">Load image to start editing</label>
+			<div className="image-load-btn">
+				<label htmlFor="file">Load image</label>
 				<input id="file" type="file" onChange={loadImage}/>
 			</div>
 		);
